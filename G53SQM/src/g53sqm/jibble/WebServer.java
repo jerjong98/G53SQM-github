@@ -33,6 +33,8 @@ public class WebServer {
     public WebServer(String rootDir, int port) throws WebServerException {
         try {
             _rootDir = new File(rootDir).getCanonicalFile();
+            System.out.println("Jibble web server (modified by Kong Jer Jong 010719 for G53SQM)");
+            System.out.println("Root Directory: " + _rootDir.getCanonicalPath());
         }
         catch (IOException e) {
             throw new WebServerException("Unable to determine the canonical path of the web root directory.");
@@ -47,6 +49,7 @@ public class WebServer {
         ServerSocket serverSocket = null;
         try {
             serverSocket = new ServerSocket(_port);
+            System.out.println("Port: " +_port);
         }
         catch (Exception e) {
             throw new WebServerException("Cannot start the web server on port " + _port + ".");
