@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="TimPong">
+<project name="G53SQM">
 
 <target name="clean">
 	<delete dir = "build"/>
@@ -13,16 +13,16 @@
 </target>
 
 <target name="jar" depends = "compile">
-	<mkdir dir="build/jar"/>
-	<jar destfile="build/jar/Tpong.jar" basedir="build/classes">
+	
+	<jar destfile="jibble.jar" basedir="build/classes">
 		<manifest>
-			<attribute name="Main-Class" value="Tpong.Main"/>
+			<attribute name="Main-Class" value="WebServerMain"/>
 		</manifest>
 	</jar>
 </target>
 
 <target name = "run" depends = "jar">
-	<java jar = "build/jar/Tpong.jar" fork="true"/>
+	<java jar = "jibble.jar" fork="true"/>
 </target>
 
 </project>
