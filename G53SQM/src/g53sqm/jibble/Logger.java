@@ -16,6 +16,8 @@ $Id: Logger.java,v 1.2 2004/02/01 13:37:35 pjm2 Exp $
 */
 
 import org.slf4j.LoggerFactory;
+
+
 /**
  * A logging class which prefixes messages to the standard output with
  * human readable timestamps.

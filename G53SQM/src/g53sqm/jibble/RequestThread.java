@@ -21,6 +21,8 @@ import java.net.*;
 import java.util.*;
 
 
+
+
 /**
  * A thread which deals with an individual request to the web server.
  * This is passed a socket from the WebServer when a connection is
@@ -29,7 +31,7 @@ import java.util.*;
  * @author Copyright Paul Mutton, http://www.jibble.org/
  */
 public class RequestThread implements Runnable {
-
+	
     public RequestThread(Socket socket, File rootDir) {
         _socket = socket;
         _rootDir = rootDir;
@@ -37,6 +39,8 @@ public class RequestThread implements Runnable {
     
     // handles a connction from a client.
     public void run() {
+    	
+    	
         String ip = "unknown";
         String request = "unknown";
         int bytesSent = 0;
